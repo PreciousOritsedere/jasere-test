@@ -11,7 +11,7 @@ export default function Home() {
       </div>
 
       <div className="green">
-      <p>Sub text</p>
+      
 
       </div>
     </main>

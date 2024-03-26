@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .parallelogram {
+    padding: 16px; /* px-4 */
+    position: relative;
+    overflow: hidden; /* Hide the pseudo-element overflow */
+    border-radius: 0.5rem; /* rounded-md */
+  }
+
+  .parallelogram::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+    transform: skewY(-10deg);
+    transform-origin: top right;
+    z-index: -1;
+  }
+
+  .parallelogram .content {
+    position: relative; /* Ensures content is above pseudo-element */
+  }
+
+  .parallelogram h3,
+  .parallelogram p {
+    transform: skewY(10deg);
+  }
+}
+

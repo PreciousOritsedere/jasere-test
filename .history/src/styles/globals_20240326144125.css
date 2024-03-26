@@ -32,22 +32,28 @@ body {
   }
 }
 
-.parallelogram {
+.slanted-parallel {
+  background: #6b4fc6; /* Purple background */
+  color: white;
+  padding-left: 16px; /* Left padding */
+  padding-right: 100px; /* Right padding - increase if needed */
   position: relative;
-  overflow: hidden; 
-  background-image: url('/Rectangle 1.svg');
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center; 
-  padding: 16px;
+  overflow: hidden; /* Hide overflow to maintain the shape */
 }
 
-.green {
-  position: relative;
-  overflow: hidden; 
-  background-image: url('/Rectangle 2.svg');
-  background-size: contain; 
-  background-repeat: no-repeat;
-  background-position: left-center; 
-  padding: 16px;
+.slanted-parallel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 80%; /* Adjust this value to control the width of the slanted side */
+  background: inherit;
+  transform-origin: top right;
+  transform: skewY(-10deg); /* Controls the slant angle */
 }
+
+.content {
+  position: relative; /* Ensure it's above the pseudo-element */
+}
+

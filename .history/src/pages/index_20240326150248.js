@@ -10,10 +10,7 @@ export default function Home() {
         <p>Content</p>
       </div>
 
-      <div className="green">
-      <p>Sub text</p>
-
-      </div>
+      <div className="bg-green-400 text-white px-4 py-2 rounded-md">text</div>
     </main>
   );
 }

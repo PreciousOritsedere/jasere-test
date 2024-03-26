@@ -38,16 +38,20 @@ body {
   background-image: url('/Rectangle 1.svg');
   background-size: cover; 
   background-repeat: no-repeat;
+  /* You might want to adjust this to position your background as needed */
   background-position: center; 
   padding: 16px;
 }
 
 .green {
+  /* Existing styles */
   position: relative;
-  overflow: hidden; 
+  overflow: hidden; /* Hide overflow */
+  /* Add your background image here, using the path to your SVG */
   background-image: url('/Rectangle 2.svg');
-  background-size: contain; 
+  background-size: contain; /* This will cover the entire div with your SVG */
   background-repeat: no-repeat;
+  /* You might want to adjust this to position your background as needed */
   background-position: left-center; 
   padding: 16px;
 }

@@ -10,9 +10,8 @@ export default function Home() {
         <p>Content</p>
       </div>
 
-      <div className="green">
-      <p>Sub text</p>
-
+      <div>
+        
       </div>
     </main>
   );

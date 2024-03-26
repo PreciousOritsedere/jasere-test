@@ -33,21 +33,20 @@ body {
 }
 
 .parallelogram {
+  background: #6b4fc6; /* Or use bg-purple-400 if you're using a utility-first CSS framework */
+  color: white;
+  padding: 16px; /* px-4 */
+  padding-top: 32px; /* py-2, adjusted for the skew */
+  padding-bottom: 32px; /* py-2, adjusted for the skew */
+  transform: skew(-20deg);
+  margin-left: 20px;
+  margin-right: 100px; /* Adjusted for the skew to prevent text overflow */
   position: relative;
-  overflow: hidden; 
-  background-image: url('/Rectangle 1.svg');
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center; 
-  padding: 16px;
+  overflow: hidden; /* Prevents the child elements from overflowing */
+  border-radius: 16px;
 }
 
-.green {
-  position: relative;
-  overflow: hidden; 
-  background-image: url('/Rectangle 2.svg');
-  background-size: contain; 
-  background-repeat: no-repeat;
-  background-position: left-center; 
-  padding: 16px;
+.parallelogram h3,
+.parallelogram p {
+  transform: skew(20deg);
 }
